@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  line-height:150%;
+}
+
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+  --background-grey-color: #f7f9fc;
+  --text-color-blue: #6fbaf8;
+
+  /* size */
+  --padding: 16px;
+  --avatar-size: 36px;
+
+  /* font size */
+  --font-large: 28px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /* box-shadow */
+  --box-shadow: 1px 1px 3px 0px #cccccc;
+}
+
+body {
+  background-color: var(--background-grey-color);
+  font-family: 'NanumGothicCoding';
+}
+
+a{
+  color:var(--text-color-blue);
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: var(--text-color-blue);
+}
+
+/* wrap */
+.wrap {
+  margin: 100px 0;
+}
+
+
+
+.profile-icon-wrap {
+  display: flex;
+}
+
+/* profile-section */
+.profile {
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  justify-content: space-between;
+}
+
+.profile-left {
+  display: flex;
+  padding: 0 0 0 50px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.profile-left ul li{
+  padding-bottom: 7px;
+}
+
+.profile-left li:nth-child(1){
+  font-size: var(--font-large);
+}
+
+.profile-left li:nth-child(3){
+  color:var(--text-color-blue)
+}
+
+.profile-left img{
+  padding-right: 20px;
+}
+
+.profile-btn {
+  width: 110px;
+  height: 40px;
+  color: white;
+  margin-top: 3px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.profile-right {
+  height:200px;
+  display: flex;
+  padding-right: 50px;
+  padding-left: 30px;
+  border-left: 1px solid #cccccc;
+  align-items: center;
+}
+
+.profile-right ul{
+  padding:20px;
+}
+
+.profile-right ul li{
+  padding-bottom: 10px;
+}
+
+
+
+.wrap-contents {
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+  margin-top: 50px;
+  display: flex;
+}
+
+/* works-section */
+.works {
+  width:20%;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow)
+}
+
+.works-text{
+  padding: 30px;
+}
+
+.works-text p{
+  font-size: var(--font-large);
+  padding-bottom: var(--padding)
+}
+
+
+
+/* .about-skills-section */
+.about-skills {
+  width:60%;
+  height: 600px;
+  background-color: white;
+  margin: 0 12px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+}
+
+.about-skills-about{
+padding-bottom: 150px;
+border-bottom: 1px solid #cccccc;
+}
+
+.about-skills-about p:nth-child(1){
+  font-size: var(--font-large);
+  padding-bottom: var(--padding);
+}
+
+.about-skills-skills{
+  padding-top: 30px;
+}
+
+.about-skills-skills p{
+ font-size: var(--font-large);
+ padding-bottom: var(--padding);
+}
+
+
+.about-skills-skills ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-skills-skills li{
+  border: 1px solid #cccccc;
+  padding:10px 20px 10px 20px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.right-flex {
+  width:20%;
+}
+
+/* find-section */
+.find {
+  height: 300px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+}
+
+.find-wrap{
+  margin:0 auto;
+  text-align: center;
+  color: var(--text-color-blue);
+}
+
+.find-wrap li{
+  padding:5px;
+}
+
+.find-wrap li:nth-child(1){
+  font-size: 80px;
+}
+
+.find-wrap li:nth-child(2){
+  color:black;
+}
+
+.find-btn{
+  width: 110px;
+  height: 40px;
+  color: white;
+  margin-top: 3px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* .people-section */
+.people {
+  /* width:250px; */
+  height: 300px;
+  margin-top: 20px;
+}
+
+.people p{
+  padding: var(--padding);
+}
+
+.people p:nth-child(1){
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.people>div{
+  padding-top: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.people li{
+  padding:3px;
+}
+
+.people li:nth-child(1){
+  font-weight: bold;
+}
+.people li:nth-child(2){
+  color:grey;
+}
+.people li:nth-child(3){
+  color:var(--text-color-blue)
+}
+
+@media screen and (max-width: 920px) {
+.wrap{
+  margin:50px 0;
+}
+
+.profile{
+  flex-direction: column;
+  height:400px;
+}
+
+.profile-right {
+  border:none;
+}
+
+.wrap-contents{
+  flex-direction: column;
+}
+
+.works,
+.about-skills,
+.right-flex,
+.people
+{
+  margin:auto;
+  width:100%;
+  margin-bottom: 30px;
+}
+
+.works-text{
+  text-align: center;
+}
+
+
+}
