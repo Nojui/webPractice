@@ -1,0 +1,320 @@
+$soft-green: #dff0d8;
+$soft-blue: #d9edf7;
+$soft-skin: #fcf7e2;
+$text-green: #448258;
+$text-blue: #447992;
+$text-skin: #8f7a58;
+$skyblue: #88ceeb;
+$emerald: #49cb63;
+$purple: #4b4eb4;
+$orange: #ffce61;
+$blue: #007bff;
+$grey: #808080;
+$dark-grey: #343a40;
+$red: #ff0000;
+$background-color: #f2f2f2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+// body {
+//   // font-family: "NanumSquare";
+// }
+
+// menu section
+.menu {
+  position: fixed;
+  width: 150px;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  background-color: $purple;
+  transform: translate(-100px);
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 15px 0 15px;
+  }
+
+  div > div {
+    transform: translate(-500px);
+  }
+
+  transition: all 0.5s;
+  &:hover {
+    transform: translate(0px);
+
+    div > div {
+      animation-name: menu-slide;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      display: block;
+    }
+    div > i {
+      animation-name: icon-slide;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  i:not(:hover) {
+    animation-name: icon-back;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes menu-slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(40px);
+  }
+}
+@keyframes icon-slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-90px);
+  }
+}
+@keyframes icon-back {
+  0% {
+    transform: translate(-90px);
+  }
+  100% {
+    transform: translate(-0px);
+  }
+}
+
+// main wrap
+.main-wrap {
+  margin-left: 50px;
+}
+
+// search section
+.search {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+}
+
+.search-bar-left {
+  padding-left: 15px;
+
+  input {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px 0 0 3px;
+  }
+
+  input::placeholder {
+    font-size: 15px;
+    padding-left: 5px;
+  }
+
+  button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: $dark-grey;
+    border-radius: 0 3px 3px 0;
+  }
+
+  i {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.search-bar-right {
+  font-size: 16px;
+  color: $grey;
+  display: flex;
+
+  i,
+  span {
+    padding-right: 40px;
+  }
+
+  > div {
+    position: relative;
+  }
+
+  .search-bar-right-alarm1 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -9px;
+    right: 30px;
+    background-color: $red;
+    border-radius: 4px;
+    color: white;
+    text-align: center;
+    font-size: 9px;
+    line-height: 15px;
+    font-weight: 800;
+  }
+
+  .search-bar-right-alarm2 {
+    @extend .search-bar-right-alarm1;
+  }
+}
+
+// .dashboard section
+.dashboard {
+  width: 80%;
+  padding: 25px 3px 15px 3px;
+  margin: auto;
+  // background-color: $orange;
+
+  > p {
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 33px;
+  }
+
+  @mixin card($배경선) {
+    width: 250px;
+    height: 120px;
+    box-shadow: -5px 0px 0px 0px $배경선, 0px 0px 3px 2px #ccc;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      font-size: 16px;
+      p {
+        padding: 5px;
+      }
+      p:nth-child(2) {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    i {
+      font-size: 30px;
+      color: $grey;
+    }
+  }
+
+  .dashboard-card {
+    display: flex;
+    padding: 10px 5px 25px 5px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-card1 {
+    @include card($skyblue);
+  }
+  .dashboard-card2 {
+    @include card($emerald);
+  }
+  .dashboard-card3 {
+    @include card($purple);
+  }
+  .dashboard-card4 {
+    @include card($orange);
+  }
+}
+
+// gragh-section
+.gragh-tasks {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.gragh {
+  width: 70%;
+  height: 100%;
+  margin: 0 0 10px 10px;
+  box-shadow: 0px 0px 3px 2px #ccc;
+
+  .gragh-title {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: $background-color;
+    font-weight: bold;
+  }
+
+  .gragh-gragh {
+    padding: 15px;
+  }
+}
+
+// tasks section
+.tasks {
+  @extend .gragh;
+  width: 27%;
+
+  .tasks-title {
+    @extend .gragh-title;
+  }
+
+  p {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+
+    span:nth-child(2) {
+      width: 25px;
+      height: 25px;
+      background-color: $blue;
+      font-size: 12px;
+      text-align: center;
+      line-height: 25px;
+      color: white;
+      font-weight: bold;
+      border-radius: 7px;
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .dashboard {
+    width: 100%;
+  }
+  .gragh-tasks {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 746px) {
+  .gragh-tasks {
+    flex-direction: column;
+  }
+  .gragh {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .search-bar-left{
+    padding-left: 5px;
+  }
+  .search-bar-right span{
+    padding-right: 5px;
+  }
+  .search-bar-right i{
+    padding-right: 20px;
+  }
+
+}
