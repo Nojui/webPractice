@@ -148,8 +148,19 @@ $background-color: #f2f2f2;
     padding-right: 40px;
   }
 
+  i{
+    position:absolute;
+  }
+
   > div {
     position: relative;
+  }
+
+  .search-ab1{
+    left:-60%;
+  }
+  .search-ab2{
+    left:-30%;
   }
 
   .search-bar-right-alarm1 {
@@ -157,7 +168,7 @@ $background-color: #f2f2f2;
     width: 15px;
     height: 15px;
     top: -9px;
-    right: 30px;
+    right: -5px;
     background-color: $red;
     border-radius: 4px;
     color: white;
@@ -313,8 +324,19 @@ $background-color: #f2f2f2;
   .search-bar-right span{
     padding-right: 5px;
   }
-  .search-bar-right i{
-    padding-right: 20px;
-  }
 
+}
+
+@media screen and (max-width: 450px) {
+.search-bar-right>span{
+font-size: 12px;
+padding-left: 3px;
+}
+
+.search-bar-left input{
+  width:100px;
+}
+.search-bar-right .search-ab1 {
+  left: -70%;
+}
 }
