@@ -29,9 +29,9 @@
   padding: 100px 0 0 100px;
 }
 
-.main-text p {
+/* .main-text p {
   white-space: nowrap;
-}
+} */
 
 .main-text p:nth-child(1) {
   margin-bottom: 20px;
@@ -273,32 +273,40 @@
     display: flex;
     flex-direction: column;
   }
-
+  
   .main-text {
     margin: auto;
     text-align: center;
     padding: 100px 0 0 0;
   }
-
+  
   .main-phone {
     margin: auto;
   }
-
+  
   .main-btn {
     margin:auto;
     margin-top: 15px;
     padding:10px;
   }
-
+  
   .blue-offer-icons{
     flex-direction: column;
   }
-
+  
   .blue-offer-icons>div{
     padding-bottom: 50px;
   }
-
+  
   .blue-offer{
     height:1000px;
   }
+}
+
+@media screen and (max-width: 550px) {
+
+  .main-text{
+
+  }
+
 }
